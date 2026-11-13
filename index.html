@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Timer</title>
+        <style>
+            body{
+    background-color: lightskyblue;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+}
+div{
+    background-color:lightgoldenrodyellow;
+    border-radius:10px;
+    padding:20px;
+    color:orange;
+}
+            </style>
+        </head>
     <body>
         <center>
         <div>
         <h1 id="output">Loading.................</h1>
         </div>
         <script>
-            let targetDate = new Date("2026-11-12T19:28:00");
+            let targetDate = new Date("2026-11-12T19:43:00");
             // Dynamic Target Date //
             const targetDate1 = new Date();
             targetDate1.setDate(targetDate1.getDate() + 2);
@@ -23,7 +41,7 @@
                     function updateTimer(){
                         let now = new Date();
                         // let difference = targetDate - now;
-                        let difference = target1 - now;
+                         let difference = targetDate1 - now;
                             if(difference <= 0){
                                    document.getElementById("output").innerHTML = "Time is up!!!";
                               return;
