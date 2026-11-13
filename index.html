@@ -6,7 +6,15 @@
         <h1 id="output">Loading.................</h1>
         </div>
         <script>
-            let targetDate = new Date("2026-11-12T07:25:00");
+            let targetDate = new Date("2026-11-12T19:28:00");
+            // Dynamic Target Date //
+            const targetDate1 = new Date();
+            targetDate1.setDate(targetDate1.getDate() + 2);
+            targetDate1.setHours(targetDate1.getHours() + 14);
+       targetDate1.setMinutes(targetDate1.getMinutes() + 35);
+        targetDate1.setSeconds(targetDate1.getSeconds() + 50);
+             // Dynamic code ends //
+
 
             setInterval(updateTimer, 1000);
 
@@ -14,8 +22,8 @@
 
                     function updateTimer(){
                         let now = new Date();
-                        let difference = targetDate - now;
-
+                        // let difference = targetDate - now;
+                        let difference = target1 - now;
                             if(difference <= 0){
                                    document.getElementById("output").innerHTML = "Time is up!!!";
                               return;
